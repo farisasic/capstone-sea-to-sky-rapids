@@ -1,0 +1,89 @@
+.faq-page h3 {
+  text-align: left;
+  font-size: 25px;
+  color: $dark_blue;
+  margin-bottom: 15px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: $dark_blue;;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 0;
+}
+
+.active, .accordion:hover,
+button:focus {
+  background-color: #ccc;
+  background: white;
+  border: none;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 15px;
+  color: $dark_blue;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+ }
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top: 2px $yellow solid;
+    margin: 0;
+  }
+
+button.accordion {
+  text-transform: uppercase;
+  font-family: "American-Captain";
+  font-size: 18px;
+  background-color: $light_blue;
+  color: $dark_blue;
+  letter-spacing: 3px;
+  line-height: 18px;
+}
+
+#faq.faq-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.question-box {
+  margin-bottom: 10px;
+  box-shadow: 1px 2px 5px #cccccc;
+}
+
+@media only screen and (min-width: 720px){
+
+  .faq-page .accordion {
+    font-size: 1.1em;
+  }
+
+  .site .faq-page {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+}

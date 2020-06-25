@@ -1,0 +1,246 @@
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 101;
+
+	// Left side logo
+	.site-branding {
+		text-transform: uppercase;
+		margin-left: 20px;
+		padding-top: 8px;
+	}
+
+	.inner-width {
+		height: 72px;
+		background-image: linear-gradient(#00303fe0, #00303fc4, #00303fa2);
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		align-items: center;
+	}
+
+	// Links
+	.site-branding a, .main-navigation a{
+		color: white;
+		display: block;
+		text-decoration: none;
+		text-align: right;
+	}
+
+	.main-navigation a {
+		font-size: 18px;
+		padding: 10px 0;
+		&:hover, &:focus {
+			color: $yellow;
+		}
+	}
+
+	// Hamburger button
+	.button-line {
+		background-color: white;
+		height: 4px;
+		width: 35px;
+		margin: 5px 0;
+		border-radius: 3px;
+		display: block;
+	}
+
+	.menu-toggle {
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		margin-right: 20px;
+	}
+
+	button.menu-toggle:focus {
+		background-color: transparent;
+		outline: none;
+	}
+
+	// Toggled menu
+	.main-navigation.toggled {
+		position: relative;
+		a {
+			height: 100%;
+		}
+		.nav-menu {
+			height: 100%;
+			width: 100%; 
+			margin-top: 72px;
+			z-index: 101; 
+			top: 0; 
+			left: 0;
+			background-color: #00303fa2;
+			transition: 0.5s; 
+			z-index: 100;
+			padding-right: 20px;
+		}
+	}
+
+	// Add slide transition when hamburger menu is opened
+	@media (max-width: 700px) {
+		.nav-menu {
+			display: block;
+			height: 0;
+			width: 100%; 
+			position: fixed;
+			margin-top: 72px;
+			z-index: 101; 
+			top: 0; 
+			left: 0;
+			background-color: #00303fa2;
+			transition: 0.5s; 
+			z-index: 100;
+			padding-right: 20px;
+			overflow: hidden;
+		}
+	}
+}
+
+// Header
+
+.custome-logo{
+    width: 50px;
+}
+.site-branding{
+    height: 70px;
+}
+
+.main-navigation {
+	display: block;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+}
+
+#menu-item-286 a {
+	color: $yellow;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	right: 0;
+	top: 0;
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.site-header {
+		.menu-toggle {
+			display: none;
+		}
+
+		.main-navigation a {
+			font-size: 16px;
+			padding: 0;
+
+		}
+		
+		.main-navigation a:hover, .main-navigation a:focus {
+			border-bottom: 1px solid $yellow;
+			color: white;
+		}
+
+		.main-navigation ul {
+			display: flex;
+			padding: 0 25px;
+			li {
+				display: block;
+			}
+			li:not(:last-child){
+				margin-right: 25px;
+			}
+		}
+	}
+
+	#menu-item-286 a {
+		color: white;
+		border: 1px solid white;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 3px;
+
+		&:hover {
+			border: 1px solid $yellow;
+		}
+	}
+}
+
+@media(min-width:1000px){
+    .custome-logo{
+        width: 55px;
+        padding-top: 10px;
+    }
+    .site-branding{
+        height: 95px;
+    }
+}

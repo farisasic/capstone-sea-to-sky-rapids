@@ -1,0 +1,95 @@
+.banner {
+    background-color: $dark_blue;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.page-id-20 .banner {
+    max-width: 100%;
+}
+
+.banner img {
+    opacity: 0.75;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.banner h1 {
+    color: white;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 99;
+}
+
+.banner.home h1 {
+    max-width: 240px;
+}
+
+.banner.faq img {
+    object-position: top right;
+}
+
+.banner.who-we-are img {
+    object-position: bottom center;
+}
+
+@media (min-width: 400px) {
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    .banner.home h1 {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 750px) {
+
+    .banner img {
+        height: 650px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 800px) {
+    .banner h1 {
+        font-size: 70px;
+    }
+
+    .banner.home h1 {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner.single-tour {
+        width: 100vw;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .banner {
+        margin: 0 auto;
+    }
+
+    .banner.tours {
+        margin: 0 auto;
+    }
+
+    main#primary .banner {
+        margin: 0 auto;
+    }
+}

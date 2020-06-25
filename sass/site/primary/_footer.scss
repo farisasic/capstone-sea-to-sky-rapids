@@ -1,0 +1,169 @@
+.site-footer {
+	background-color: $dark_blue;
+	color: #fff;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menus {
+	display: inline-block;
+    justify-content: space-between;
+    width: 100%;
+
+        svg path {
+            fill: white;
+        }
+
+        svg path:hover {
+            fill: $yellow;
+        }
+}
+
+.site-info {
+    display: inline-block;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-navigation {
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    justify-content: space-between;
+    display: block;
+}
+
+.trip-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+        p {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+}
+
+.trip-info ul {
+    list-style: none;
+}
+
+.trip-after {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    
+        p {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+}
+
+.trip-after a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    font-family: "FuturaPT";
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+        p{
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+}
+
+.footer-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+        p {
+            font-family: "FuturaPT";
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 700;
+            
+        }
+        a {
+            font-family: "FuturaPT";
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+}
+
+.social-navigation {
+    margin-top: 5px;
+}
+
+.menu-footer-menu-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+.footer-navigation a:hover {
+    color: $yellow;
+}
+
+.menu-social-menu-container ul {
+    list-style: none;
+
+}
+
+ul.menu {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .site-footer {
+        height: 250px;
+    }
+    .footer-navigation {
+        display: flex;
+    }
+
+    .footer-contact {
+        align-items: center;
+    }
+    
+    .trip-info,
+    .trip-after,
+    .footer-contact,
+    .footer-phone {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 0;
+        
+    }
+
+    .menu-social-menu-container ul {
+        display: flex;
+    }
+    
+    .footer-menus svg{
+        margin: 5px;
+    }
+
+}
+
+@media only screen and (min-width: 1000px){
+    .footer-navigation{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+}

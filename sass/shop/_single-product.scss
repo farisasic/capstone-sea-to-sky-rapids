@@ -1,0 +1,348 @@
+.product-summary, .single-product .book-btn, .overview-paragraph, .highlights, .whats-included, .itinerary, .book-trip, form.cart, .single-product .faq-btn {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.single-product .faq-btn {
+	max-width: 800px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.single-product {
+	div.product {
+		position: relative;
+
+		.woocommerce-product-gallery {
+			position: relative;
+			float: left;
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 2em;
+				right: 1em;
+				display: block;
+				z-index: 99;
+			}
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: 0.5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+
+				&.woocommerce-product-gallery--columns-#{$i} {
+
+					.flex-control-thumbs {
+
+						li {
+
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.stock {
+
+	&:empty::before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+
+/* ---------------------------- Custom single-product page styles ---------------------------- */
+.single-product {
+	// Body Styles
+	.summary {
+		ul{
+			margin: 0;
+			padding: 0 0 0 17px;	
+			li {
+				margin: 0;
+			}
+		}
+		h2 {
+			font-size: 25px;
+			color: $dark_blue;
+			max-width: 800px;
+			margin: auto;
+			margin-bottom: 10px;
+			margin-top: 20px;
+			
+		}
+		.whats-included p {
+			max-width: 800px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	// Section styles
+	section {
+		max-width: 800px;
+		margin: auto;
+	}
+
+	// Product Summary
+	.product-summary {
+		display: flex;
+		justify-content: space-between;
+		ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		}
+		.col-01 {
+			margin-right: 20px;
+		}
+	}
+
+	@media (min-width: 500px){
+		.product-summary {
+			width: 100%;
+			justify-content: center;
+			margin: auto;
+			.col-01, .col-02 {
+				display: flex;
+				margin: 0;
+			}
+			.col-01 li, .col-02 li:not(:last-child){
+				margin-right: 5vw;
+				@media (min-width: 1200px){
+					margin-right: 73px;
+				}
+			}
+			
+		}
+	}
+
+	// Book Now CTA
+	.book-btn {
+		margin: 30px auto;
+		text-align: center;
+		max-width: 800px;
+		a {
+		text-decoration: none;
+		color: black;
+		font-family: $heading_font;
+		font-size: 25px;
+		background-color: $yellow;
+		display: block;
+		padding: 5px;
+		width: 100%;
+		max-width: 800px;
+		margin: auto;
+		box-shadow: 1px 1px 3px #a5a5a5;
+		transition: 0.4s ease;
+		}
+		a:hover{
+			background-color: lighten($yellow, 10%);
+		}
+	}
+
+	// List Styles
+	.highlights, .gear, .lunch, .morning-trip, .afternoon-trip {
+		p {
+			margin-bottom: 5px;
+		}
+	}
+
+	// Itinerary
+	.morning-trip, .afternoon-trip {
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		hr {
+			margin: 5px 0;
+			width: 1px;
+			height: 50px;
+			background-color:black;
+		}
+		.vertical-line:last-child {
+			display: none;
+		}
+	}
+
+	@media (min-width: 997px) {
+		.itinerary h2 {
+			padding-top: 30px;
+		} 
+	}
+
+	// Calendar/Cart Styles
+	h2.book-trip {
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
+
+	.cart {
+		max-width: 800px;
+		margin: auto;
+	}
+
+	.wc-bookings-booking-form {
+		padding: 0;
+		fieldset {
+			padding: 0;
+		}
+	}
+	.wc-bookings-booking-form fieldset .picker .hasDatepicker {
+		margin-bottom: 0;
+	}
+
+		// Persons input
+		.wc-bookings-booking-form .form-field input[type=number] {
+			width: 100%;
+		}
+
+		// Timezones block
+		.wc-bookings-date-picker-timezone-block {
+			display: none;
+		}
+
+		// Calender month picker
+		.wc-bookings-date-picker .ui-datepicker .ui-datepicker-title {
+			background-color: $dark_blue;
+		}
+
+		#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker .ui-datepicker-next, 
+		#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev {
+		background-color: $dark_blue;
+		}
+		
+		.ui-widget-header {
+			background: $dark_blue;
+		}
+
+		.wc-bookings-booking-form {
+			padding: 10px;
+			border: none;
+			box-shadow: 1px 1px 1px 1px rgb(228, 228, 228);
+			fieldset {
+				border: none;
+			}
+		
+		}
+
+		.wc-bookings-booking-cost {
+			font-family: $body_font;
+		}
+
+		// Calendar container
+		.wc-bookings-booking-form fieldset .picker.hasDatepicker {
+			margin: 0;
+		}
+
+		// Calendar date blocks
+		.wc-bookings-date-picker .ui-datepicker td.bookable a:hover {
+			background-color: lighten($light_blue, 5%) !important;
+		}
+
+		.wc-bookings-date-picker .ui-datepicker td.bookable a { //inactive/unclicked state
+			background-color: $light_blue !important;
+			color: $dark_blue !important;
+		}
+
+		.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default { //selected block
+			background: $yellow !important;
+			color: $dark_blue !important;
+		}
+
+		// Booking time
+		.wc-bookings-booking-form .block-picker li a.selected, .wc-bookings-booking-form .block-picker li a:hover  {
+			background: $yellow !important;
+			color: black !important;
+		}
+		.wc-bookings-booking-form .block-picker {
+			padding: 0;
+			margin-bottom: 20px;
+		}
+
+	// Book Now Button
+	.wc-bookings-booking-form-button {
+		font-family: $heading_font;
+		background-color: $yellow;
+		width: 100%;
+		font-size: 25px;
+		border: none;
+		border-radius: 0;
+		max-width: 800px;
+		justify-self: center;
+		margin-left: auto;
+		cursor: pointer;
+		box-shadow: 1px 1px 3px #a5a5a5;
+		transition: 0.4s ease;
+	}
+	.wc-bookings-booking-form-button:hover {
+		background-color: lighten($yellow, 10%);
+	}
+
+	// FAQ Button
+	.faq-btn {
+		margin-top: 15px;	
+		a {
+			text-decoration: none;
+			font-family: $heading_font;
+			color: black;
+			background-color: $light_blue;
+			font-size: 25px;
+			display: block;
+			padding: 7px;
+			text-align: center;
+			max-width: 800px;
+			margin: auto;
+			box-shadow: 1px 1px 3px #a5a5a5;
+			transition: 0.4s ease;
+		}
+		a:hover{
+			background-color: lighten($light_blue, 5%);
+		}
+	}
+
+}

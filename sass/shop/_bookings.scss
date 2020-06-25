@@ -1,0 +1,55 @@
+#post-123 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100vh;
+}
+
+#post-123 h1 {
+    margin-top: 100px;
+}
+
+.woocommerce-MyAccount-navigation ul li a, table.shop_table.my_account_bookings td a {
+    text-decoration: none;
+    color: $dark_blue;
+    font-weight: 700;
+}
+
+table.shop_table.my_account_bookings th, table.shop_table.my_account_bookings td {
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 48em) {
+
+    table.shop_table.my_account_bookings {
+
+		thead {
+			display: table-header-group;
+		}
+
+		tbody {
+
+			th {
+				display: table-cell;
+			}
+		}
+
+		tr {
+
+			th,
+			td {
+				text-align: left;
+			}
+
+			td {
+				display: table-cell;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+

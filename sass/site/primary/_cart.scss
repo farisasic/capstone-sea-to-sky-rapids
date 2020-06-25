@@ -1,0 +1,205 @@
+.post-145 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.page-id-145 {
+	margin-top: 72px;
+	main {
+        min-height: calc(100vh - 190px);
+    }
+
+    h1 {
+        color: $dark_blue;
+    }
+}
+
+.product-name a {
+    text-decoration: none;
+    color: #404040;
+    font-family: $heading_font;
+    font-size: 25px;
+}
+.product-name a {
+    width: 100%;
+    display: block;
+}
+
+.product-name::before {
+    width: 100%;
+    display: none;
+}
+.variation-BookingDate, .variation-BookingTime, .variation-Persons {
+    margin-left: 0;
+}
+
+.product-thumbnail::before {
+    display: none;
+}
+
+.product-thumbnail a img {
+    display: none;
+}
+
+.product-remove a {
+    text-decoration: none;
+    color: #404040;
+    font-size: 25px;
+}
+
+.woocommerce-Price-amount {
+    font-family: $body_font;
+}
+
+.variation-BookingDate p, .variation-BookingTime p, .variation-Persons p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+tr.woocommerce-cart-form__cart-item.cart_item td {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-right: 2px solid $dark_blue;
+    border-left: 2px solid $dark_blue;
+}
+
+td.product-remove {
+    border-top: 2px solid $dark_blue;
+    padding-top: 10px;
+    text-align: right;
+}
+
+tr > td.product-subtotal {
+    margin-bottom: 30px;
+    border-bottom: 2px solid $dark_blue;
+    padding-bottom: 30px;
+}
+
+tbody {
+    height: 100%;
+}
+
+td.product-price, td.product-quantity, td.product-subtotal {
+    padding-right: 50px;
+    padding-bottom: 5px;
+}
+
+td.product-price::before, td.product-quantity::before, td.product-subtotal::before {
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+.cart_totals h2 {
+    font-size: 25px;
+}
+
+.cart-subtotal td::before, .order-total td::before {
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+.wc-proceed-to-checkout {
+    margin: 30px 0;
+    text-align: center;
+    
+    a {
+    text-decoration: none;
+    color: black;
+    font-family: $heading_font;
+    font-size: 25px;
+    background-color: $yellow;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    }
+}
+
+.woocommerce-message {
+    margin-bottom: 15px;
+}
+
+.woocommerce-message a {
+    text-decoration: none;
+    color: $dark_blue;
+    font-weight: 700;
+}
+
+a.button.wc-forward::after {
+    content:"\a";
+    white-space: pre;
+}
+
+.woocommerce-message {
+    font-family: $body_font;
+}
+
+.actions input {
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+.actions button {
+    border-radius: 0;
+    background-color: $light_blue;
+    color: $dark_blue;
+    font-family: $body_font;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-weight: 700;
+}
+
+input[name="coupon_code"] {
+    font-family: $body_font;
+
+    &:active, &:focus {
+        outline-color: $dark_blue;
+    }
+}
+
+.return-to-shop a {
+    text-decoration: none;
+    font-weight: 700;
+    color: $dark_blue;
+}
+
+.woocommerce-table.woocommerce-table--order-details.shop_table.order_details th {
+    text-align: left;
+    font-family: $body_font;
+}
+
+.wc-booking-summary li {
+    font-family: $body_font;
+}
+
+.woocommerce-order-details__title {
+    color: $dark_blue;
+}
+
+.woocommerce-table__product-name.product-name {
+    color: $dark_blue;
+}
+
+tfoot tr, tfoot th {
+    font-family: $body_font;
+}
+
+.wc-booking-summary-number {
+    font-family: $body_font;
+}
+
+@media (min-width: 1000px) {
+
+    .page-id-145 {
+        margin-top: 102px;
+    }
+
+}
+
+
